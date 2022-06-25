@@ -1,8 +1,12 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
-import moment from "moment";
-import dotenv from "dotenv";
+import React, {
+  useEffect,
+  useState,
+} from 'react';
+
+import dotenv from 'dotenv';
+import moment from 'moment';
+import { FaSearch } from 'react-icons/fa';
+
 dotenv.config();
 moment().format();
 
@@ -11,7 +15,7 @@ function WeatherContainer() {
   const [time, setTime] = useState(moment().format("h:mm - dddd, D MMM'YY"));
   useEffect(() => {
     console.log(moment().format("LLLL"));
-    fetchData(setWeather, "tashkent");
+    fetchData(setWeather, "New York");
   }, []);
 
   setInterval(() => {
@@ -83,69 +87,63 @@ function WeatherContainer() {
               <ul className="city-list">
                 <li
                   className="city"
-                  onClick={() => fetchData(setWeather, "Andijan")}
+                  onClick={() => fetchData(setWeather, "New York")}
                 >
-                  Andijan
+                  New York
                 </li>
                 <li
                   className="city"
-                  onClick={() => fetchData(setWeather, "Bukhara")}
+                  onClick={() => fetchData(setWeather, "Ottawa")}
                 >
-                  Bukhara
+                  Ottawa
                 </li>
                 <li
                   className="city"
-                  onClick={() => fetchData(setWeather, "Fergana")}
+                  onClick={() => fetchData(setWeather, "La Sarre")}
                 >
-                  Fergana
+                  La Sarre
                 </li>
                 <li
                   className="city"
-                  onClick={() => fetchData(setWeather, "Jizzakh")}
+                  onClick={() => fetchData(setWeather, "Los Angeles")}
                 >
-                  Jizzakh
+                  Los Angeles
                 </li>
                 <li
                   className="city"
-                  onClick={() => fetchData(setWeather, "Khiva")}
+                  onClick={() => fetchData(setWeather, "Tokyo")}
                 >
-                  Khorezm
+                  Tokyo
                 </li>
                 <li
                   className="city"
-                  onClick={() => fetchData(setWeather, "Namangan")}
+                  onClick={() => fetchData(setWeather, "Moscow")}
                 >
-                  Namangan
+                  Moscow
                 </li>
                 <li
                   className="city"
-                  onClick={() => fetchData(setWeather, "Navoiy")}
+                  onClick={() => fetchData(setWeather, "London")}
                 >
-                  Navoiy
+                  London
                 </li>
                 <li
                   className="city"
-                  onClick={() => fetchData(setWeather, "Kashkadaryo")}
+                  onClick={() => fetchData(setWeather, "Beijing")}
                 >
-                  Kashkadaryo
+                  Beijing
                 </li>
                 <li
                   className="city"
-                  onClick={() => fetchData(setWeather, "Samarkand")}
+                  onClick={() => fetchData(setWeather, "Cape Town")}
                 >
-                  Samarkand
+                  Cape Town
                 </li>
                 <li
                   className="city"
-                  onClick={() => fetchData(setWeather, "Sirdaryo")}
+                  onClick={() => fetchData(setWeather, "Berlin")}
                 >
-                  Sirdaryo
-                </li>
-                <li
-                  className="city"
-                  onClick={() => fetchData(setWeather, "Surxondaryo")}
-                >
-                  Surxondaryo
+                  Berlin
                 </li>
                 <li
                   className="city"
@@ -155,9 +153,9 @@ function WeatherContainer() {
                 </li>
                 <li
                   className="city"
-                  onClick={() => fetchData(setWeather, "Karakalpakstan")}
+                  onClick={() => fetchData(setWeather, "Seoul")}
                 >
-                  Karakalpakstan
+                  Seoul
                 </li>
               </ul>
             </div>
